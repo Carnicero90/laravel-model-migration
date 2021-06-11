@@ -14,13 +14,17 @@
         <main>
             <ul>
                 @foreach ($travels as $travel)
-                @php
-                                        dump($travel);
-
-                @endphp
+                <li>
+                    <ul>
+                        <li>Partenza: {{ $travel->from }}</li>
+                        <li>Destinazione: {{ $travel->to }}</li>
+                        <li>Data partenza: {{ $travel->start }}</li>
+                        <li>Data destinazione: {{ $travel->end }}</li>
+                    </ul>
+                </li>
+                    
                 @endforeach
             </ul>
-
         </main>
 
     </body>

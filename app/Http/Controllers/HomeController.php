@@ -8,8 +8,9 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index() {
+        $travels = Travel::all();
         $data = [
-            'travels' => Travel::all()
+            'travels' => $travels
         ];
         return view('welcome', $data);
     }
