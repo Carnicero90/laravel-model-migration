@@ -1,0 +1,54 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.travels {
+  display: flex;
+  flex-direction: column;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.travels h1 {
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.travels .travel-info {
+  border: 1px solid slategray;
+  background-color: lightgrey;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+}
+
+.travels .travel-info li {
+  border-bottom: 1px solid gray;
+  padding: 0.3em;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+.travels .travel-info li.description {
+  border: 1px solid slategray;
+  background-color: thistle;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+.travels .travel-info li:nth-of-type(2n) {
+  padding-left: 0.8em;
+}
+

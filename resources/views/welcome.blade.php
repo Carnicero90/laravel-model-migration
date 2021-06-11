@@ -7,24 +7,33 @@
         <title>Laravel</title>
 
         <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600;700&display=swap" rel="stylesheet">
+        {{-- custom css --}}
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}">
 
     </head>
     <body>
         <main>
-            <ul>
-                @foreach ($travels as $travel)
-                <li>
-                    <ul>
-                        <li>Partenza: {{ $travel->from }}</li>
-                        <li>Destinazione: {{ $travel->to }}</li>
-                        <li>Data partenza: {{ $travel->start }}</li>
-                        <li>Data destinazione: {{ $travel->end }}</li>
-                    </ul>
-                </li>
-                    
-                @endforeach
-            </ul>
+            {{-- section travels --}}
+            <section class="travels">
+                <h1>Le nostre offerte</h1>
+                <ul>
+                    @foreach ($travels as $travel)
+                    <li>
+                        <ul class="travel-info">
+                            <li>Partenza: {{ $travel->from }}</li>
+                            <li>Destinazione: {{ $travel->to }}</li>
+                            <li>Data partenza: {{ $travel->start }}</li>
+                            <li>Data destinazione: {{ $travel->end }}</li>
+                            <li class="description"> <p>{{ $travel->description }}</p></li>
+                        </ul>
+                    </li>   
+                    @endforeach
+                </ul>
+
+            </section>
+            {{-- END section travels --}}
+            
         </main>
 
     </body>
