@@ -14,6 +14,11 @@
     </head>
     <body>
         <main>
+            @include('components.covid', [
+                'top' => '15px',
+                'left' => 'calc(100% - 15px); transform: translateX(-100%)'
+                // TODO: magari cambialo in un unico argomento opzionale, tipo 'style'
+            ])
             {{-- section travels --}}
             <section class="travels">
                 <h1>Le nostre offerte</h1>
